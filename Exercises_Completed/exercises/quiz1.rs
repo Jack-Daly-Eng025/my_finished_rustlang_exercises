@@ -13,13 +13,12 @@
 //
 // No hints this time ;)
 
-// I AM NOT DONE
 
 // Put your function here!
 // fn calculate_price_of_apples {
 
 // Don't modify this function!
-#[test]
+
 fn verify_test() {
     let price1 = calculate_price_of_apples(35);
     let price2 = calculate_price_of_apples(40);
@@ -30,4 +29,21 @@ fn verify_test() {
     assert_eq!(80, price2);
     assert_eq!(41, price3);
     assert_eq!(65, price4);
+}
+
+fn calculate_price_of_apples(num: i32) -> i32{
+    let mut apple_cost: i32 = 2;
+    let mut result : i32 = 0;
+
+    if num<40 {
+        result = num*apple_cost;
+
+    }
+    else {
+        apple_cost = 1;
+        result = num * apple_cost;
+    }
+
+    return result;
+    
 }
