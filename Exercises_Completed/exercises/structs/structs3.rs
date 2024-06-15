@@ -7,7 +7,6 @@
 // Execute `rustlings hint structs3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
 #[derive(Debug)]
 struct Package {
@@ -17,7 +16,7 @@ struct Package {
 }
 
 impl Package {
-    fn new(sender_country: String, recipient_country: String, weight_in_grams: u32) -> Package {
+    fn new(sender_country: String, recipient_country: String, weight_in_grams: u32) -> Self {
         if weight_in_grams < 10 {
             // This is not how you should handle errors in Rust,
             // but we will learn about error handling later.
@@ -31,12 +30,15 @@ impl Package {
         }
     }
 
-    fn is_international(&self) -> ??? {
+    fn is_international(&self) -> bool {
         // Something goes here...
+        self.sender_country != self.recipient_country
     }
 
-    fn get_fees(&self, cents_per_gram: u32) -> ??? {
+    fn get_fees(&self, cents_per_gram: u32) -> u32 {
         // Something goes here...
+        self.weight_in_grams * cents_per_gram
+
     }
 }
 
