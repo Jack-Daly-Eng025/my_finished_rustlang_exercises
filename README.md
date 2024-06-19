@@ -4,4 +4,4 @@
 
 * This repository is to help me keep a backup of completed exercises done in Rust by following Rustlings free book/course.
 
-* Completed up to 63.5% of materials, including HashMaps and Modules and Generic T.
+* Completed up to 70.8% of materials, including HashMaps and Modules and Generic T.
